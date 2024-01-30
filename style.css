@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-image: linear-gradient(#023e8a,#231942);
+    height: 7rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    line-height: 7rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+.links{
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fdf0d5;
+}
+.links:hover{
+    color: #ef476f;
+}
+.links.active{
+    color: #ef476f;
+}
+#myimg{
+    border-radius: 50%;
+    height: 6rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+#myimg:hover{
+    opacity: 50%;
+}
+.contact{
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+.hero-sec{
+    background-color: black;
+    height: 32rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.hero-content{
+    text-align: right;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    flex: 1;
+}
+.hero-img{
+    flex: 1;
+    text-align: right;
+    height: 32rem;
+}
+.hero-img img{
+    max-width: 100%;
+    top: 7rem;
+    height: 32rem;
+}
+.hero-img::before {
+    content: "";
+    position: absolute;
+    top: 7rem;
+    left: 38rem;
+    width: 20rem;
+    height: 25rem;
+    background-color: black;
+    border-radius: 0 100% 100% 0;
+    transform-origin: top right;
+}
+.circles{
+    position: absolute;
+    top: 6.8rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    height: 25rem;
+    padding: 0.5rem;
+    opacity: 30%;
+    margin-left: 1rem;
+}
+.circle-row{
+    display: flex;
+    align-items: center;
+}
+.circle{
+    width: 2rem;
+    height: 5.8rem;
+    background-color: gray;
+    border-radius: 50%;
+}
+button{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5rem;
+    background-color: #fca311;
+}
+button:hover{
+    background-color: #06d6a0;
+}
+#aboutme{
+    padding: 2rem;
+    text-align: justify;
+    background-color: #c7f9cc;
+}
+h2{
+    font-size: 2.5rem;
+}
+.greet{
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+.info{
+    line-height: 2rem;
+}
+#education{
+    padding: 2rem;
+    background-color: #fcca46;
+    text-align: justify;
+}
+ul{
+    line-height: 2rem;
+}
+#skills{
+    background-color: #ffafcc;
+    padding: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+h4{
+    font-size: 1rem;
+    line-height: 2rem;
+}
+#skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.soft{
+    padding-top: 2.5rem;
+}
+#hobbies{
+    background-color: #a3cef1;
+    padding: 2rem;
+}
+.hobby{
+    display: flex;
+    justify-content: space-evenly;
+}
+.interests{
+    background-image: radial-gradient(#f7e1d7,#a3cef1);
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 10rem;
+    border: 2px solid #457b9d;
+}
+#achievements{
+    padding: 2rem;
+    background-color: #ffe6a7;
+}
+#contactme{
+    background-image: linear-gradient(to right,rgb(241, 59, 89),rgb(232, 21, 232),rgb(54, 165, 239));
+    padding: 2rem;
+    color: white;
+}
+.box{
+    padding: 2rem;
+    background-image: linear-gradient(to right,black,rgb(68, 65, 65));
+    border-radius: 1rem;
+}
+.details{
+    background-image: linear-gradient(to right,rgb(241, 59, 89),rgb(232, 21, 232),rgb(54, 165, 239));
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+.contact-info{
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+footer{
+    background-color: black;
+    height: 3rem;
+    color: white;
+    text-align: center;
+    line-height: 3rem;
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes flyIn{
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+.hero-content {
+    animation: flyIn 1.5s ease-out;
+}
+@media only screen and (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
+    .options {
+        flex-direction: row;
+    }
+    .hero-sec {
+        flex-direction: row;
+    }
+    .hero-content {
+        text-align: right;
+        padding-right: 3rem;
+        padding-top: 5rem;
+    }
+    .hero-img {
+        height: 32rem;
+    }
+    .circles {
+        margin-left: 1rem;
+    }
+}
